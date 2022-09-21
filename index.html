@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="products">
+        <ul id="productsUl">
+            <li class="product">
+                <div id="productDescription">
+                    <div id="productTitle">
+                        <h2 id="productName"></h2>
+                        <h3 id="productPrice"></h3>
+                    </div>
+                    <div id="productDetails">
+                        <h5 id="productCategory"></h5>
+                        <h5 id="productId"></h5>
+                        <h5 id="productStockQuantity"></h5> 
+                    </div>
+                </div>
+                <div id="buttonProduct">
+                    <button class="productDeleteButton">מחיקה</button>
+                    <button class="productUpdateButton">עדכון</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div id="managementOptions">
+        <div id="addingProductDiv">
+            <label>הוספת מוצר חדש</label>
+            <input required placeholder="שם מוצר" class="nameAdd" type="text"></input>
+            <input required placeholder="קטגוריה" class="categoryAdd" type="text"></input>
+            <input required placeholder="מחיר" class="priceAdd" type="number" min="0"></input>
+            <input required placeholder="כמות במלאי" class="stockQuantityAdd" type="number" min="0"></input>
+            <button class="submitAddingProduct" type="submit">הוסף מוצר</button>
+        </div>
+    
+        <div id="deleteProductDiv">
+            <label>מחיקת מוצר</label>
+            <input required placeholder="מזהה מוצר" class="idDelete" type="number" min="0"></input>
+            <button class="submitDeletingProduct" type="submit">מחק מוצר</button>
+        </div>
+    
+        <div id="updateProductDiv">
+            <label>עדכון מוצר</label>
+            <input required placeholder="מזהה מוצר" class="idUpdate" type="number" min="0"></input>
+            <input required placeholder="מחיר מוצר" class="priceUpdate" type="number" min="0"></input>
+            <button class="submitUpdatingProduct" type="submit">עדכן מוצר</button>
+        </div>
+    
+        <div id="searchProductDiv">
+            <label> חיפוש </label>
+            <input required placeholder="שם מוצר" class="name" type="text"></input>
+            <input required placeholder="קטגוריה" class="category" type="text"></input>
+            <input required placeholder="מחיר" class="price" type="number" min="0"></input>
+            <input required placeholder="כמות במלאי" class="stockQuantity" type="number" min="0"></input>
+            <button class="submitSearchProduct" type="submit">חפש...</button>
+        </div>
+
+        <div id="searchByRange">
+            <label> חיפוש לפי טווח מחיר</label>
+            <div id="rangePrice">
+                <input class="min" type="number" placeholder="טווח מינימלי" min="0">
+                <input class="max" type="number" placeholder="טווח מקסימלי" min="0">
+            </div>
+            <button class="submitSearchByRange" type="submit">חפש...</button>
+        </div>
+
+        <div id="searchByOutOfStock">
+            <label> מוצרים שאזלו מהמלאי / קרובים לאזול</label>
+            <button class="submitSearchByOutOfStock" type="submit">חפש...</button>
+        </div>
+    </div>
+
+    <script src="StoreManagement.js"></script>
+</body>
+</html>
